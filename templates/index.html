@@ -6,13 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta property="og:title" content="AGNEZ MO FanBook" />
+    <meta property="og:description" content="Appreciation Site" />
+    <meta property="og:image" content="https://scontent-sin6-4.cdninstagram.com/v/t51.2885-15/279399422_510433274117617_6785378495822887535_n.jpg?stp=dst-jpg_e35_p720x720&_nc_ht=scontent-sin6-4.cdninstagram.com&_nc_cat=101&_nc_ohc=4yAioxKuON0AX9bS3ML&edm=ABmJApABAAAA&ccb=7-5&ig_cache_key=MjgyODAyNjA3MTc3NTkzNDM1NQ%3D%3D.2-ccb7-5&oh=00_AfAEzsBmvJIUmY8abRtJTBm7l74rygU9n5JN5S_c7RCk6A&oe=63BFA1FA&_nc_sid=6136e7" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
 
-    <title>Fan Book</title>
+    <title>AM FanBook</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap"
         rel="stylesheet">
@@ -25,7 +30,7 @@
             width: 100%;
             height: 250px;
 
-            background-image:  linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://statik.tempo.co/data/2022/10/10/id_1147580/1147580_720.jpg');
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://statik.tempo.co/data/2022/10/10/id_1147580/1147580_720.jpg');
             background-position: center 30%;
             background-size: cover;
 
@@ -66,6 +71,7 @@
             set_temp();
             show_comment();
         });
+
         function set_temp() {
             $.ajax({
                 type: "GET",
@@ -76,11 +82,12 @@
                 }
             })
         }
+
         function save_comment() {
             $.ajax({
                 type: 'POST',
                 url: '/homework',
-                data: { 
+                data: {
                     name_give: $('#name').val(),
                     comment_give: $('#comment').val()
                 },
@@ -90,6 +97,7 @@
                 }
             })
         }
+
         function show_comment() {
             $.ajax({
                 type: "GET",
